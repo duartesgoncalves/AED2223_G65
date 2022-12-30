@@ -26,7 +26,9 @@ void clearScreen();
 void readAirports(AirportMap &airports);
 void buildGraph(const AirportMap airports, Graph &graph);
 void shortestPathMenu(const AirportMap airports, Graph graph);
+void airlinePreference(const AirportMap airports, Graph graph);
 void shortestPath(const AirportMap airports, Graph graph);
+void shortestPath(const AirportMap airports, Graph graph, vector<string> airline);
 
 int main() {
     AirportMap airports;
@@ -85,7 +87,7 @@ void readAirports(AirportMap &airports) {
         string code;
 
         getline(iss, code, ',');
-        airports.insert({code, airports.size() + 1});
+        airports.insert({code, airports.size()});
     }
 }
 
@@ -114,9 +116,9 @@ void shortestPathMenu(const AirportMap airports, Graph graph) {
     while (option != 0) {
         cout << "  Find the minimum route between:" << endl;
         cout << " __________________________________________________ " << endl;
-        cout << "  1 - 2 airports                                    " << endl;
-        cout << "  2 - 2 cities                                      " << endl;
-        cout << "  3 - 2 locations                                   " << endl;
+        cout << "  1 - airports                                      " << endl;
+        cout << "  2 - cities                                        " << endl;
+        cout << "  3 - locations (coordinates)                       " << endl;
         cout << "                                                    " << endl;
         cout << "                                                    " << endl;
         cout << "  0 - Back                                          " << endl;
@@ -126,7 +128,7 @@ void shortestPathMenu(const AirportMap airports, Graph graph) {
 
         switch (option) {
             case 1:
-                shortestPath(airports, graph);
+                airlinePreference(airports, graph);
                 break;
             case 2:
                 cout << "  2" << endl;
@@ -145,6 +147,32 @@ void shortestPathMenu(const AirportMap airports, Graph graph) {
     clearScreen();
 }
 
+void airlinePreference(const AirportMap airports, Graph graph) {
+    clearScreen();
+
+    int option = -1;
+    cout << "  Do you have a preference for the airline? no (0) | yes (1)" << endl;
+    while (option != 0 && option != 1) { cout << "  Option:"; cin >> option; cout << endl; }
+
+    if (option == 1) {
+        cout << "  How many airlines do you want to consider?" << endl;
+        int n = 0;
+        while (n < 1) { cout << "  Number:"; cin >> n; cout << endl; }
+
+        vector<string> airlines(n);
+
+        cout << "  Enter the airlines:" << endl;
+        for (int i = 0; i < n; i++) {
+            cout << "  Airline " << i + 1 << ":";
+            cin >> airlines[i];
+        }
+
+        shortestPath(airports, graph, airlines);
+    }
+
+    else { shortestPath(airports, graph); }
+}
+
 void shortestPath(const AirportMap airports, Graph graph) {
     clearScreen();
 
@@ -154,5 +182,51 @@ void shortestPath(const AirportMap airports, Graph graph) {
     cout << "  Destination airport code:";
     cin >> dest;
 
-    graph.printShortestPath(airports.at(src), airports.at(dest));
+    vector<int> path = graph.shortestPath(airports.at(src), airports.at(dest));
+
+    if (path.size() == 0) cout << "  No route found" << endl;
+    else {
+        cout << "  One possible route is:" << endl;
+        for (auto node : path) {
+            auto it = find_if(airports.begin(), airports.end(), [node](const pair<string, int> &p) {
+                return p.second == node;
+            });
+
+            cout << "    " << it->first;
+        }
+    }
+
+    cout << endl << "  Press enter to continue...";
+    cin.ignore(); cin.get();
+
+    clearScreen();
+}
+
+void shortestPath(const AirportMap airports, Graph graph, vector<string> airlines) {
+    clearScreen();
+
+    string src, dest;
+    cout << "  Source airport code:";
+    cin >> src;
+    cout << "  Destination airport code:";
+    cin >> dest;
+
+    vector<int> path = graph.shortestPath(airports.at(src), airports.at(dest), airlines);
+
+    if (path.size() == 0) cout << "  No route found" << endl;
+    else {
+        cout << "  One possible route is:" << endl;
+        for (auto node : path) {
+            auto it = find_if(airports.begin(), airports.end(), [node](const pair<string, int> &p) {
+                return p.second == node;
+            });
+
+            cout << "    " << it->first;
+        }
+    }
+
+    cout << endl << "  Press enter to continue...";
+    cin.ignore(); cin.get();
+
+    clearScreen();
 }

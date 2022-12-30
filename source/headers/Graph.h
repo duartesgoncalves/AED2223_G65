@@ -7,7 +7,6 @@ using namespace std;
 
 class Graph {
     struct Edge {
-        int src;
         int dest;
         list<string> airlines;
     };
@@ -23,8 +22,9 @@ class Graph {
     public:
         explicit Graph(int n);
         void addEdge(int src, int dest, const string &airline);
-        void bfs(int src);
-        void printShortestPath(int src, int dest);
+        void bfs(int src, int dest);
+        vector<int> shortestPath(int src, int dest);
+        vector<int> shortestPath(int src, int dest, vector<string> &airlines);
 };
 
 #endif
