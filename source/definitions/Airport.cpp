@@ -34,3 +34,9 @@ double Airport::getLatitude() const {
 double Airport::getLongitude() const {
     return longitude;
 }
+
+double Airport::distance(double lat, double lon) const {
+    double x = (lon - longitude) * cos((latitude + lat) / 2);
+    double y = lat - latitude;
+    return sqrt(x * x + y * y) * 6371;
+}

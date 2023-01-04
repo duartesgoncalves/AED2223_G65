@@ -7,97 +7,247 @@ void Graph::addEdge(int src, int dest, const string &airline) {
     if (it == nodes[src].edges.end()) {
         nodes[src].edges.push_back({dest, {airline}});
     } else {
-        it->airlines.push_back(airline);
+        it->airlines.insert(airline);
     }
 }
 
-void Graph::bfs(int src, int dest) {
+void Graph::bfs(int src) {
+    for (auto &node : nodes) {
+        node.dist = -1;
+        node.visited = false;
+        node.previous.clear();
+    }
+
     queue<int> q;
     q.push(src);
     nodes[src].dist = 0;
-
-    vector<bool> visited(n, false);
-
-    visited[src] = true;
+    nodes[src].visited = true;
 
     while (!q.empty()) {
-        int u = q.front();
+        int node = q.front();
         q.pop();
 
-        if (u == dest) {
-            break;
-        }
-
-        for (const auto &edge : nodes[u].edges) {
-            if (!visited[edge.dest]) {
-                visited[edge.dest] = true;
-                nodes[edge.dest].dist = nodes[u].dist + 1;
+        for (auto &edge : nodes[node].edges) {
+            if (!nodes[edge.dest].visited) {
+                nodes[edge.dest].dist = nodes[node].dist + 1;
+                nodes[edge.dest].visited = true;
+                nodes[edge.dest].previous.push_back(node);
                 q.push(edge.dest);
+            } else if (nodes[edge.dest].dist == nodes[node].dist + 1) {
+                nodes[edge.dest].previous.push_back(node);
             }
         }
     }
 }
 
-vector<int> Graph::shortestPath(int src, int dest) {
-    bfs(src, dest);
-
-    if (nodes[dest].dist == 0) {
-        return {};
+void Graph::bfs(set<int> src) {
+    for (auto &node : nodes) {
+        node.dist = -1;
+        node.visited = false;
+        node.previous.clear();
     }
 
-    if (nodes[dest].dist == 1) {
-        return {src, dest};
+    queue<int> q;
+    for (auto &s : src) {
+        q.push(s);
+        nodes[s].dist = 0;
+        nodes[s].visited = true;
     }
 
-    vector<int> path;
-    path.push_back(dest);
+    while (!q.empty()) {
+        int node = q.front();
+        q.pop();
 
-    auto u = dest;
-    while (u != src) {
-        for (const auto &e : nodes[u].edges) {
-            if (nodes[e.dest].dist == nodes[u].dist - 1) {
-                path.push_back(e.dest);
-                u = e.dest;
-                break;
+        for (auto &edge : nodes[node].edges) {
+            if (!nodes[edge.dest].visited) {
+                nodes[edge.dest].dist = nodes[node].dist + 1;
+                nodes[edge.dest].visited = true;
+                nodes[edge.dest].previous.push_back(node);
+                q.push(edge.dest);
+            } else if (nodes[edge.dest].dist == nodes[node].dist + 1) {
+                nodes[edge.dest].previous.push_back(node);
+            }
+        }
+    }
+}
+
+vector<list<int>> Graph::shortestPaths(int src, int dest) {
+    bfs(src);
+
+    vector<list<int>> paths;
+    if (nodes[dest].dist == -1) return paths;
+
+    queue<list<int>> q;
+    q.push({dest});
+
+    while (!q.empty()) {
+        list<int> path = q.front();
+        q.pop();
+
+        int node = path.front();
+        if (node == src) {
+            paths.push_back(path);
+        } else {
+            for (auto &previous : nodes[node].previous) {
+                list<int> newPath = path;
+                newPath.push_front(previous);
+                q.push(newPath);
             }
         }
     }
 
-    reverse(path.begin(), path.end());
-    return path;
+    auto it = paths.begin();
+    while (it != paths.end()) {
+        if (it->size() != nodes[dest].dist + 1) {
+            it = paths.erase(it);
+        } else {
+            it++;
+        }
+    }
+
+    return paths;
 }
 
-vector<int> Graph::shortestPath(int src, int dest, vector<string> &airlines) {
-    bfs(src, dest);
+vector<list<int>> Graph::shortestPaths(int src, int dest, const set<string> &airlines) {
+    bfs(src);
 
-    if (nodes[dest].dist == 0) {
-        return {};
-    }
+    vector<list<int>> paths;
+    if (nodes[dest].dist == -1) return paths;
 
-    if (nodes[dest].dist == 1) {
-        return {src, dest};
-    }
+    queue<list<int>> q;
+    q.push({dest});
 
-    vector<int> path;
-    path.push_back(dest);
+    while (!q.empty()) {
+        list<int> path = q.front();
+        q.pop();
 
-    auto u = dest;
-    while (u != src) {
-        for (const auto &e : nodes[u].edges) {
-            if (nodes[e.dest].dist == nodes[u].dist - 1) {
-                auto it = find_if(e.airlines.begin(), e.airlines.end(), [&airlines](const string &airline) {
-                    return find(airlines.begin(), airlines.end(), airline) != airlines.end();
-                });
+        int node = path.front();
+        if (node == src) {
+            paths.push_back(path);
+        } else {
+            for (auto &previous : nodes[node].previous) {
+                bool valid = false;
+                for (auto &edge : nodes[previous].edges) {
+                    if (edge.dest == node) {
+                        for (auto &airline : edge.airlines) {
+                            if (find(airlines.begin(), airlines.end(), airline) != airlines.end()) {
+                                valid = true;
+                                break;
+                            }
+                        }
+                        break;
+                    }
+                }
 
-                if (it != e.airlines.end()) {
-                    path.push_back(e.dest);
-                    u = e.dest;
-                    break;
+                if (valid) {
+                    list<int> newPath = path;
+                    newPath.push_front(previous);
+                    q.push(newPath);
                 }
             }
         }
     }
 
-    reverse(path.begin(), path.end());
-    return path;
+    auto it = paths.begin();
+    while (it != paths.end()) {
+        if (it->size() != nodes[dest].dist + 1) {
+            it = paths.erase(it);
+        } else {
+            it++;
+        }
+    }
+
+    return paths;
+}
+
+vector<list<int>> Graph::shortestPaths(set<int> src, set<int> dest) {
+    bfs(src);
+
+    vector<list<int>> paths;
+    for (auto &d : dest) {
+        if (nodes[d].dist == -1) continue;
+
+        queue<list<int>> q;
+        q.push({d});
+
+        while (!q.empty()) {
+            list<int> path = q.front();
+            q.pop();
+
+            int node = path.front();
+            if (find(src.begin(), src.end(), node) != src.end()) {
+                paths.push_back(path);
+            } else {
+                for (auto &previous : nodes[node].previous) {
+                    list<int> newPath = path;
+                    newPath.push_front(previous);
+                    q.push(newPath);
+                }
+            }
+        }
+        auto it = paths.begin();
+        while (it != paths.end()) {
+            if (it->size() != nodes[d].dist + 1) {
+                it = paths.erase(it);
+            } else {
+                it++;
+            }
+        }
+    }
+
+    return paths;
+}
+
+vector<list<int>> Graph::shortestPaths(set<int> src, set<int> dest, const set<string> &airlines) {
+    bfs(src);
+
+    vector<list<int>> paths;
+    for (auto &d : dest) {
+        if (nodes[d].dist == -1) continue;
+
+        queue<list<int>> q;
+        q.push({d});
+
+        while (!q.empty()) {
+            list<int> path = q.front();
+            q.pop();
+
+            int node = path.front();
+            if (find(src.begin(), src.end(), node) != src.end()) {
+                paths.push_back(path);
+            } else {
+                for (auto &previous : nodes[node].previous) {
+                    bool valid = false;
+                    for (auto &edge : nodes[previous].edges) {
+                        if (edge.dest == node) {
+                            for (auto &airline : edge.airlines) {
+                                if (find(airlines.begin(), airlines.end(), airline) != airlines.end()) {
+                                    valid = true;
+                                    break;
+                                }
+                            }
+                            break;
+                        }
+                    }
+
+                    if (valid) {
+                        list<int> newPath = path;
+                        newPath.push_front(previous);
+                        q.push(newPath);
+                    }
+                }
+            }
+        }
+
+        auto it = paths.begin();
+        while (it != paths.end()) {
+            if (it->size() != nodes[d].dist + 1) {
+                it = paths.erase(it);
+            } else {
+                it++;
+            }
+        }
+    }
+
+    return paths;
 }

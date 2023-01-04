@@ -22,6 +22,7 @@ class Airport {
         string getCountry() const;
         double getLatitude() const;
         double getLongitude() const;
+        double distance(double lat, double lon) const;
 };
 
 #endif
