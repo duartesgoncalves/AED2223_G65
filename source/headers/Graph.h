@@ -30,6 +30,10 @@ class Graph {
         vector<list<int>> shortestPaths(int src, int dest, const set<string> &airlines);
         vector<list<int>> shortestPaths(set<int> src, set<int> dest);
         vector<list<int>> shortestPaths(set<int> src, set<int> dest, const set<string> &airlines);
+        int getNumOutgoing(int src) const;
+        int getNumAirlines(int src) const;
+        set<int> getDestinations(int src) const;
+        set<int> reachable(int src, int hops);
 };
 
 #endif

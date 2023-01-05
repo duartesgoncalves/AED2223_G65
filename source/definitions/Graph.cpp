@@ -251,3 +251,39 @@ vector<list<int>> Graph::shortestPaths(set<int> src, set<int> dest, const set<st
 
     return paths;
 }
+
+int Graph::getNumOutgoing(int src) const {
+    return nodes[src].edges.size();
+}
+
+int Graph::getNumAirlines(int src) const {
+    set<string> airlines;
+    for (auto &edge : nodes[src].edges) {
+        for (auto &airline : edge.airlines) {
+            airlines.insert(airline);
+        }
+    }
+    return airlines.size();
+}
+
+set<int> Graph::getDestinations(int src) const {
+    set<int> destinations;
+    for (auto &edge : nodes[src].edges) {
+        destinations.insert(edge.dest);
+    }
+    return destinations;
+}
+
+set<int> Graph::reachable(int src, int hops) {
+    set<int> reachable;
+
+    bfs(src);
+
+    for (int i = 0; i < nodes.size(); i++) {
+        if (nodes[i].dist <= hops && nodes[i].dist != -1) {
+            reachable.insert(i);
+        }
+    }
+
+    return reachable;
+}
