@@ -17,7 +17,7 @@ typedef unordered_map<string, set<int>> CityMap;
  * This class is used to handle the menu, the user input and the program flow.
  */
 class MenuHandler {
-    public:
+public:
     void clearScreen();
     void readAirports(CodeMap &codes, AirportMap &airports, CityMap &cities);
     void buildGraph(const CodeMap codes, Graph &graph);

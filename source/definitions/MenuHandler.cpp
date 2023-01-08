@@ -4,11 +4,23 @@ typedef unordered_map<string, int> CodeMap;
 typedef unordered_map<int, Airport> AirportMap;
 typedef unordered_map<string, set<int>> CityMap;
 
-//TODO
+/**
+ * @brief MenuHandler::clearScreen
+ * This function clears the screen.
+ * Complexity: O(1)
+ */
 void MenuHandler::clearScreen() {
     cout << string(50, '\n');
 }
 
+/**
+ * @brief MenuHandler::readAirports
+ * This function reads the airports, their cities and their codes from the file and stores them in the maps.
+ * Complexity: O(n)
+ * @param codes - The map that stores the airport codes.
+ * @param airports - The map that stores the airports.
+ * @param cities - The map that stores the cities.
+ */
 void MenuHandler::readAirports(CodeMap &codes, AirportMap &airports, CityMap &cities) {
     ifstream file("../data/airports.csv");
 
@@ -33,6 +45,13 @@ void MenuHandler::readAirports(CodeMap &codes, AirportMap &airports, CityMap &ci
     }
 }
 
+/**
+ * @brief MenuHandler::buildGraph
+ * This function builds the graph from the file.
+ * Complexity: O(n)
+ * @param codes - The map that stores the airport codes.
+ * @param graph - The graph.
+ */
 void MenuHandler::buildGraph (const CodeMap codes, Graph &graph) {
     ifstream file("../data/flights.csv");
 
@@ -51,6 +70,15 @@ void MenuHandler::buildGraph (const CodeMap codes, Graph &graph) {
     }
 }
 
+/**
+ * @brief MenuHandler::pathMenu
+ * This function shows the path menu.
+ * Complexity: O(n)
+ * @param codes - The map that stores the airport codes.
+ * @param airports - The map that stores the airports.
+ * @param cities - The map that stores the cities.
+ * @param graph - The graph.
+ */ //TODO aa
 void MenuHandler::pathMenu(const CodeMap codes, const AirportMap airports, const CityMap cities, Graph graph) {
     clearScreen();
 
@@ -92,6 +120,12 @@ void MenuHandler::pathMenu(const CodeMap codes, const AirportMap airports, const
     clearScreen();
 }
 
+/**
+ * @brief MenuHandler::airlinePreference
+ * This function shows the path menu.
+ * Complexity: O(n)
+ * @return The set of airlines.
+ */
 set<string> MenuHandler::airlinePreference() {
     clearScreen();
 
@@ -113,6 +147,15 @@ set<string> MenuHandler::airlinePreference() {
     return airlines;
 }
 
+/**
+ * @brief MenuHandler::pathAirports
+ * This function shows the airport pathing menu.
+ * Complexity: O(V + E)
+ * @param codes - The map that stores the airport codes.
+ * @param airports - The map that stores the airports.
+ * @param graph - The graph.
+ * @param airlines - The set of airlines.
+ */
 void MenuHandler::pathAirports(const CodeMap codes, const AirportMap airports, Graph graph, set<string> airlines) {
     clearScreen();
 
@@ -147,6 +190,16 @@ void MenuHandler::pathAirports(const CodeMap codes, const AirportMap airports, G
     clearScreen();
 }
 
+/**
+ * @brief MenuHandler::pathCities
+ * This function shows the city pathing menu.
+ * Complexity: O(V(V + E))
+ * @param codes - The map that stores the airport codes.
+ * @param airports - The map that stores the airports.
+ * @param cities - The map that stores the cities.
+ * @param graph - The graph.
+ * @param airlines - The set of airlines.
+ */ //TODO: Fix strings on input
 void MenuHandler::pathCities(const CodeMap codes, const AirportMap airports, const CityMap cities, Graph graph, set<string> airlines) {
     clearScreen();
 
@@ -180,7 +233,15 @@ void MenuHandler::pathCities(const CodeMap codes, const AirportMap airports, con
 
     clearScreen();
 }
-
+/**
+ * @brief MenuHandler::pathLocations
+ * This function shows the location pathing menu.
+ * Complexity: O(V(V + E))
+ * @param codes - The map that stores the airport codes.
+ * @param airports - The map that stores the airports.
+ * @param graph - The graph.
+ * @param airlines - The set of airlines.
+ */
 void MenuHandler::pathLocations(const CodeMap codes, AirportMap airports, Graph graph, set<string> airlines) {
     clearScreen();
 
@@ -236,6 +297,14 @@ void MenuHandler::pathLocations(const CodeMap codes, AirportMap airports, Graph 
     clearScreen();
 }
 
+/**
+ * @brief MenuHandler::airportStats
+ * This function shows the airport stats.
+ * Complexity: O(V + E)
+ * @param codes - The map that stores the airport codes.
+ * @param airports - The map that stores the airports.
+ * @param graph - The graph.
+ */
 void MenuHandler::airportStats(const CodeMap codes, const AirportMap airports, Graph graph) {
     clearScreen();
 

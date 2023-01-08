@@ -87,38 +87,38 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a7b14c9bc0b5fbf50165aaf92f4aeef1d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graph.html#a7b14c9bc0b5fbf50165aaf92f4aeef1d">Graph</a> (int n)</td></tr>
 <tr class="memdesc:a7b14c9bc0b5fbf50165aaf92f4aeef1d"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_graph.html#a7b14c9bc0b5fbf50165aaf92f4aeef1d" title="Graph::Graph This is the Graph constructor. It receives the amount of nodes the graph will have....">Graph::Graph</a> This is the <a class="el" href="class_graph.html" title="The Graph class This class represents the graph data structure.">Graph</a> constructor. It receives the amount of nodes the graph will have. It initializes the nodes vector with the given amount of nodes. Complexity: O(1)  <br /></td></tr>
 <tr class="separator:a7b14c9bc0b5fbf50165aaf92f4aeef1d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a67e86adac2f5b1905905e8c14f896ede"><td class="memItemLeft" align="right" valign="top"><a id="a67e86adac2f5b1905905e8c14f896ede" name="a67e86adac2f5b1905905e8c14f896ede"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>addEdge</b> (int src, int dest, const string &amp;airline)</td></tr>
+<tr class="memitem:a67e86adac2f5b1905905e8c14f896ede"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graph.html#a67e86adac2f5b1905905e8c14f896ede">addEdge</a> (int src, int dest, const string &amp;airline)</td></tr>
+<tr class="memdesc:a67e86adac2f5b1905905e8c14f896ede"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_graph.html#a67e86adac2f5b1905905e8c14f896ede" title="Graph::addEdge This function adds an edge to the graph. It receives the source node,...">Graph::addEdge</a> This function adds an edge to the graph. It receives the source node, the destination node and the airline that flies between the two nodes. Complexity: O(N)  <br /></td></tr>
 <tr class="separator:a67e86adac2f5b1905905e8c14f896ede"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8e828a6d59c61309e8fe1d05e1a0ee48"><td class="memItemLeft" align="right" valign="top"><a id="a8e828a6d59c61309e8fe1d05e1a0ee48" name="a8e828a6d59c61309e8fe1d05e1a0ee48"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>bfs</b> (int src)</td></tr>
+<tr class="memitem:a8e828a6d59c61309e8fe1d05e1a0ee48"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graph.html#a8e828a6d59c61309e8fe1d05e1a0ee48">bfs</a> (int src)</td></tr>
+<tr class="memdesc:a8e828a6d59c61309e8fe1d05e1a0ee48"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_graph.html#a8e828a6d59c61309e8fe1d05e1a0ee48" title="Graph::bfs This function performs a breadth-first search on the graph, starting at the given node....">Graph::bfs</a> This function performs a breadth-first search on the graph, starting at the given node. It sets the distance of each node to the given node, and the previous nodes of each node. Complexity: O(V + E)  <br /></td></tr>
 <tr class="separator:a8e828a6d59c61309e8fe1d05e1a0ee48"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a18abac77ad524d1241fb9b6a9528ae41"><td class="memItemLeft" align="right" valign="top"><a id="a18abac77ad524d1241fb9b6a9528ae41" name="a18abac77ad524d1241fb9b6a9528ae41"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>bfs</b> (set&lt; int &gt; src)</td></tr>
+<tr class="memitem:a18abac77ad524d1241fb9b6a9528ae41"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graph.html#a18abac77ad524d1241fb9b6a9528ae41">bfs</a> (set&lt; int &gt; src)</td></tr>
+<tr class="memdesc:a18abac77ad524d1241fb9b6a9528ae41"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_graph.html#a8e828a6d59c61309e8fe1d05e1a0ee48" title="Graph::bfs This function performs a breadth-first search on the graph, starting at the given node....">Graph::bfs</a> This function performs a breadth-first search on the graph, starting at the given nodes. It sets the distance of each node to the given nodes, and the previous nodes of each node. Complexity: O(V + E)  <br /></td></tr>
 <tr class="separator:a18abac77ad524d1241fb9b6a9528ae41"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a796401d483f4996a9ec674e4895e9aaa"><td class="memItemLeft" align="right" valign="top"><a id="a796401d483f4996a9ec674e4895e9aaa" name="a796401d483f4996a9ec674e4895e9aaa"></a>
-vector&lt; list&lt; int &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>shortestPaths</b> (int src, int dest)</td></tr>
+<tr class="memitem:a796401d483f4996a9ec674e4895e9aaa"><td class="memItemLeft" align="right" valign="top">vector&lt; list&lt; int &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graph.html#a796401d483f4996a9ec674e4895e9aaa">shortestPaths</a> (int src, int dest)</td></tr>
+<tr class="memdesc:a796401d483f4996a9ec674e4895e9aaa"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_graph.html#a796401d483f4996a9ec674e4895e9aaa" title="Graph::shortestPaths This function returns all the shortest paths between the given nodes....">Graph::shortestPaths</a> This function returns all the shortest paths between the given nodes. Complexity: O(V + E)  <br /></td></tr>
 <tr class="separator:a796401d483f4996a9ec674e4895e9aaa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aae206102d50261bb79b7690a3e897c52"><td class="memItemLeft" align="right" valign="top"><a id="aae206102d50261bb79b7690a3e897c52" name="aae206102d50261bb79b7690a3e897c52"></a>
-vector&lt; list&lt; int &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>shortestPaths</b> (int src, int dest, const set&lt; string &gt; &amp;airlines)</td></tr>
+<tr class="memitem:aae206102d50261bb79b7690a3e897c52"><td class="memItemLeft" align="right" valign="top">vector&lt; list&lt; int &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graph.html#aae206102d50261bb79b7690a3e897c52">shortestPaths</a> (int src, int dest, const set&lt; string &gt; &amp;airlines)</td></tr>
+<tr class="memdesc:aae206102d50261bb79b7690a3e897c52"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_graph.html#a796401d483f4996a9ec674e4895e9aaa" title="Graph::shortestPaths This function returns all the shortest paths between the given nodes....">Graph::shortestPaths</a> This function returns all the shortest paths between the given nodes. Complexity: O(V + E)  <br /></td></tr>
 <tr class="separator:aae206102d50261bb79b7690a3e897c52"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab4b706c24cffedb061cabc79205e580c"><td class="memItemLeft" align="right" valign="top"><a id="ab4b706c24cffedb061cabc79205e580c" name="ab4b706c24cffedb061cabc79205e580c"></a>
-vector&lt; list&lt; int &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>shortestPaths</b> (set&lt; int &gt; src, set&lt; int &gt; dest)</td></tr>
+<tr class="memitem:ab4b706c24cffedb061cabc79205e580c"><td class="memItemLeft" align="right" valign="top">vector&lt; list&lt; int &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graph.html#ab4b706c24cffedb061cabc79205e580c">shortestPaths</a> (set&lt; int &gt; src, set&lt; int &gt; dest)</td></tr>
+<tr class="memdesc:ab4b706c24cffedb061cabc79205e580c"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_graph.html#a796401d483f4996a9ec674e4895e9aaa" title="Graph::shortestPaths This function returns all the shortest paths between the given nodes....">Graph::shortestPaths</a> This function returns all the shortest paths between the given nodes. Complexity: O(V(V + E))  <br /></td></tr>
 <tr class="separator:ab4b706c24cffedb061cabc79205e580c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4e9cfbebb1503844e4b3e07b3c18558c"><td class="memItemLeft" align="right" valign="top"><a id="a4e9cfbebb1503844e4b3e07b3c18558c" name="a4e9cfbebb1503844e4b3e07b3c18558c"></a>
-vector&lt; list&lt; int &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>shortestPaths</b> (set&lt; int &gt; src, set&lt; int &gt; dest, const set&lt; string &gt; &amp;airlines)</td></tr>
+<tr class="memitem:a4e9cfbebb1503844e4b3e07b3c18558c"><td class="memItemLeft" align="right" valign="top">vector&lt; list&lt; int &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graph.html#a4e9cfbebb1503844e4b3e07b3c18558c">shortestPaths</a> (set&lt; int &gt; src, set&lt; int &gt; dest, const set&lt; string &gt; &amp;airlines)</td></tr>
+<tr class="memdesc:a4e9cfbebb1503844e4b3e07b3c18558c"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_graph.html#a796401d483f4996a9ec674e4895e9aaa" title="Graph::shortestPaths This function returns all the shortest paths between the given nodes....">Graph::shortestPaths</a> This function returns all the shortest paths between the given nodes. Complexity: O(V(V + E))  <br /></td></tr>
 <tr class="separator:a4e9cfbebb1503844e4b3e07b3c18558c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a80c82a03f851cecdf3a4ec9cbe4e7e6c"><td class="memItemLeft" align="right" valign="top"><a id="a80c82a03f851cecdf3a4ec9cbe4e7e6c" name="a80c82a03f851cecdf3a4ec9cbe4e7e6c"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>getNumOutgoing</b> (int src) const</td></tr>
+<tr class="memitem:a80c82a03f851cecdf3a4ec9cbe4e7e6c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graph.html#a80c82a03f851cecdf3a4ec9cbe4e7e6c">getNumOutgoing</a> (int src) const</td></tr>
+<tr class="memdesc:a80c82a03f851cecdf3a4ec9cbe4e7e6c"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_graph.html#a80c82a03f851cecdf3a4ec9cbe4e7e6c" title="Graph::getNumOutgoing This function returns the number of flights that depart from the desired airpor...">Graph::getNumOutgoing</a> This function returns the number of flights that depart from the desired airport. Complexity: O(1)  <br /></td></tr>
 <tr class="separator:a80c82a03f851cecdf3a4ec9cbe4e7e6c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9160b13c6bea8109ac0c9423695e41b1"><td class="memItemLeft" align="right" valign="top"><a id="a9160b13c6bea8109ac0c9423695e41b1" name="a9160b13c6bea8109ac0c9423695e41b1"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>getNumAirlines</b> (int src) const</td></tr>
+<tr class="memitem:a9160b13c6bea8109ac0c9423695e41b1"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graph.html#a9160b13c6bea8109ac0c9423695e41b1">getNumAirlines</a> (int src) const</td></tr>
+<tr class="memdesc:a9160b13c6bea8109ac0c9423695e41b1"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_graph.html#a9160b13c6bea8109ac0c9423695e41b1" title="Graph::getNumAirlines This function returns the number of airlines that operate on desired airport....">Graph::getNumAirlines</a> This function returns the number of airlines that operate on desired airport. Complexity: O(E)  <br /></td></tr>
 <tr class="separator:a9160b13c6bea8109ac0c9423695e41b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac0928455301544a742dd7cc076a5adef"><td class="memItemLeft" align="right" valign="top"><a id="ac0928455301544a742dd7cc076a5adef" name="ac0928455301544a742dd7cc076a5adef"></a>
-set&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>getDestinations</b> (int src) const</td></tr>
+<tr class="memitem:ac0928455301544a742dd7cc076a5adef"><td class="memItemLeft" align="right" valign="top">set&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graph.html#ac0928455301544a742dd7cc076a5adef">getDestinations</a> (int src) const</td></tr>
+<tr class="memdesc:ac0928455301544a742dd7cc076a5adef"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_graph.html#ac0928455301544a742dd7cc076a5adef" title="Graph::getDestinations This function returns a set of all the destinations that can be reached from t...">Graph::getDestinations</a> This function returns a set of all the destinations that can be reached from the desired airport. Complexity: O(E)  <br /></td></tr>
 <tr class="separator:ac0928455301544a742dd7cc076a5adef"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3fe807a25f3aac1ce3325e6b6b1e4436"><td class="memItemLeft" align="right" valign="top"><a id="a3fe807a25f3aac1ce3325e6b6b1e4436" name="a3fe807a25f3aac1ce3325e6b6b1e4436"></a>
-set&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>reachable</b> (int src, int hops)</td></tr>
+<tr class="memitem:a3fe807a25f3aac1ce3325e6b6b1e4436"><td class="memItemLeft" align="right" valign="top">set&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graph.html#a3fe807a25f3aac1ce3325e6b6b1e4436">reachable</a> (int src, int hops)</td></tr>
+<tr class="memdesc:a3fe807a25f3aac1ce3325e6b6b1e4436"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_graph.html#a3fe807a25f3aac1ce3325e6b6b1e4436" title="Graph::reachable This function returns a set of all the airlines that operate on the desired airport....">Graph::reachable</a> This function returns a set of all the airlines that operate on the desired airport. Complexity: O(V + E)  <br /></td></tr>
 <tr class="separator:a3fe807a25f3aac1ce3325e6b6b1e4436"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -155,6 +155,389 @@ set&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>reachable
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a67e86adac2f5b1905905e8c14f896ede" name="a67e86adac2f5b1905905e8c14f896ede"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a67e86adac2f5b1905905e8c14f896ede">&#9670;&#160;</a></span>addEdge()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Graph::addEdge </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>src</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>dest</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const string &amp;&#160;</td>
+          <td class="paramname"><em>airline</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><a class="el" href="class_graph.html#a67e86adac2f5b1905905e8c14f896ede" title="Graph::addEdge This function adds an edge to the graph. It receives the source node,...">Graph::addEdge</a> This function adds an edge to the graph. It receives the source node, the destination node and the airline that flies between the two nodes. Complexity: O(N) </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">src</td><td>- The source node. </td></tr>
+    <tr><td class="paramname">dest</td><td>- The destination node. </td></tr>
+    <tr><td class="paramname">airline</td><td>- The airline that flies between the two nodes. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a8e828a6d59c61309e8fe1d05e1a0ee48" name="a8e828a6d59c61309e8fe1d05e1a0ee48"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8e828a6d59c61309e8fe1d05e1a0ee48">&#9670;&#160;</a></span>bfs() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Graph::bfs </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>src</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><a class="el" href="class_graph.html#a8e828a6d59c61309e8fe1d05e1a0ee48" title="Graph::bfs This function performs a breadth-first search on the graph, starting at the given node....">Graph::bfs</a> This function performs a breadth-first search on the graph, starting at the given node. It sets the distance of each node to the given node, and the previous nodes of each node. Complexity: O(V + E) </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">src</td><td>- The node to start the search at. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a18abac77ad524d1241fb9b6a9528ae41" name="a18abac77ad524d1241fb9b6a9528ae41"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a18abac77ad524d1241fb9b6a9528ae41">&#9670;&#160;</a></span>bfs() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Graph::bfs </td>
+          <td>(</td>
+          <td class="paramtype">set&lt; int &gt;&#160;</td>
+          <td class="paramname"><em>src</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><a class="el" href="class_graph.html#a8e828a6d59c61309e8fe1d05e1a0ee48" title="Graph::bfs This function performs a breadth-first search on the graph, starting at the given node....">Graph::bfs</a> This function performs a breadth-first search on the graph, starting at the given nodes. It sets the distance of each node to the given nodes, and the previous nodes of each node. Complexity: O(V + E) </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">src</td><td>- A set of nodes to start the search at. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ac0928455301544a742dd7cc076a5adef" name="ac0928455301544a742dd7cc076a5adef"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac0928455301544a742dd7cc076a5adef">&#9670;&#160;</a></span>getDestinations()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">set&lt; int &gt; Graph::getDestinations </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>src</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><a class="el" href="class_graph.html#ac0928455301544a742dd7cc076a5adef" title="Graph::getDestinations This function returns a set of all the destinations that can be reached from t...">Graph::getDestinations</a> This function returns a set of all the destinations that can be reached from the desired airport. Complexity: O(E) </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">src</td><td>- The source node (airport). </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A set of all the destinations that can be reached from the desired airport. </dd></dl>
+
+</div>
+</div>
+<a id="a9160b13c6bea8109ac0c9423695e41b1" name="a9160b13c6bea8109ac0c9423695e41b1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9160b13c6bea8109ac0c9423695e41b1">&#9670;&#160;</a></span>getNumAirlines()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Graph::getNumAirlines </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>src</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><a class="el" href="class_graph.html#a9160b13c6bea8109ac0c9423695e41b1" title="Graph::getNumAirlines This function returns the number of airlines that operate on desired airport....">Graph::getNumAirlines</a> This function returns the number of airlines that operate on desired airport. Complexity: O(E) </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">src</td><td>- The source node (airport). </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The number of airlines that operate on desired airport. </dd></dl>
+
+</div>
+</div>
+<a id="a80c82a03f851cecdf3a4ec9cbe4e7e6c" name="a80c82a03f851cecdf3a4ec9cbe4e7e6c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a80c82a03f851cecdf3a4ec9cbe4e7e6c">&#9670;&#160;</a></span>getNumOutgoing()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Graph::getNumOutgoing </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>src</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><a class="el" href="class_graph.html#a80c82a03f851cecdf3a4ec9cbe4e7e6c" title="Graph::getNumOutgoing This function returns the number of flights that depart from the desired airpor...">Graph::getNumOutgoing</a> This function returns the number of flights that depart from the desired airport. Complexity: O(1) </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">src</td><td>- The source node (airport). </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The number of flights that depart from the desired airport. </dd></dl>
+
+</div>
+</div>
+<a id="a3fe807a25f3aac1ce3325e6b6b1e4436" name="a3fe807a25f3aac1ce3325e6b6b1e4436"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3fe807a25f3aac1ce3325e6b6b1e4436">&#9670;&#160;</a></span>reachable()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">set&lt; int &gt; Graph::reachable </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>src</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>hops</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><a class="el" href="class_graph.html#a3fe807a25f3aac1ce3325e6b6b1e4436" title="Graph::reachable This function returns a set of all the airlines that operate on the desired airport....">Graph::reachable</a> This function returns a set of all the airlines that operate on the desired airport. Complexity: O(V + E) </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">src</td><td>- The source node (airport). </td></tr>
+    <tr><td class="paramname">hops</td><td>- The maximum number of hops. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A set of all the airports that are reachable within a maximum of n hops (represented by the hops parameter). </dd></dl>
+
+</div>
+</div>
+<a id="a796401d483f4996a9ec674e4895e9aaa" name="a796401d483f4996a9ec674e4895e9aaa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a796401d483f4996a9ec674e4895e9aaa">&#9670;&#160;</a></span>shortestPaths() <span class="overload">[1/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">vector&lt; list&lt; int &gt; &gt; Graph::shortestPaths </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>src</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>dest</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><a class="el" href="class_graph.html#a796401d483f4996a9ec674e4895e9aaa" title="Graph::shortestPaths This function returns all the shortest paths between the given nodes....">Graph::shortestPaths</a> This function returns all the shortest paths between the given nodes. Complexity: O(V + E) </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">src</td><td>- The source node. </td></tr>
+    <tr><td class="paramname">dest</td><td>- The destination node. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A vector of lists of integers, where each list represents a path. </dd></dl>
+
+</div>
+</div>
+<a id="aae206102d50261bb79b7690a3e897c52" name="aae206102d50261bb79b7690a3e897c52"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aae206102d50261bb79b7690a3e897c52">&#9670;&#160;</a></span>shortestPaths() <span class="overload">[2/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">vector&lt; list&lt; int &gt; &gt; Graph::shortestPaths </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>src</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>dest</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const set&lt; string &gt; &amp;&#160;</td>
+          <td class="paramname"><em>airlines</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><a class="el" href="class_graph.html#a796401d483f4996a9ec674e4895e9aaa" title="Graph::shortestPaths This function returns all the shortest paths between the given nodes....">Graph::shortestPaths</a> This function returns all the shortest paths between the given nodes. Complexity: O(V + E) </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">src</td><td>- A set of source nodes. </td></tr>
+    <tr><td class="paramname">dest</td><td>- A set of destination nodes. </td></tr>
+    <tr><td class="paramname">airlines</td><td>- A set of desired airlines. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A vector of lists of integers, where each list represents a path. </dd></dl>
+
+</div>
+</div>
+<a id="ab4b706c24cffedb061cabc79205e580c" name="ab4b706c24cffedb061cabc79205e580c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab4b706c24cffedb061cabc79205e580c">&#9670;&#160;</a></span>shortestPaths() <span class="overload">[3/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">vector&lt; list&lt; int &gt; &gt; Graph::shortestPaths </td>
+          <td>(</td>
+          <td class="paramtype">set&lt; int &gt;&#160;</td>
+          <td class="paramname"><em>src</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">set&lt; int &gt;&#160;</td>
+          <td class="paramname"><em>dest</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><a class="el" href="class_graph.html#a796401d483f4996a9ec674e4895e9aaa" title="Graph::shortestPaths This function returns all the shortest paths between the given nodes....">Graph::shortestPaths</a> This function returns all the shortest paths between the given nodes. Complexity: O(V(V + E)) </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">src</td><td>- A set of source nodes. </td></tr>
+    <tr><td class="paramname">dest</td><td>- A set of destination nodes. </td></tr>
+    <tr><td class="paramname">airlines</td><td>- A set of desired airlines. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A vector of lists of integers, where each list represents a path. </dd></dl>
+
+</div>
+</div>
+<a id="a4e9cfbebb1503844e4b3e07b3c18558c" name="a4e9cfbebb1503844e4b3e07b3c18558c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4e9cfbebb1503844e4b3e07b3c18558c">&#9670;&#160;</a></span>shortestPaths() <span class="overload">[4/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">vector&lt; list&lt; int &gt; &gt; Graph::shortestPaths </td>
+          <td>(</td>
+          <td class="paramtype">set&lt; int &gt;&#160;</td>
+          <td class="paramname"><em>src</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">set&lt; int &gt;&#160;</td>
+          <td class="paramname"><em>dest</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const set&lt; string &gt; &amp;&#160;</td>
+          <td class="paramname"><em>airlines</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><a class="el" href="class_graph.html#a796401d483f4996a9ec674e4895e9aaa" title="Graph::shortestPaths This function returns all the shortest paths between the given nodes....">Graph::shortestPaths</a> This function returns all the shortest paths between the given nodes. Complexity: O(V(V + E)) </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">src</td><td>- A set of source nodes. </td></tr>
+    <tr><td class="paramname">dest</td><td>- A set of destination nodes. </td></tr>
+    <tr><td class="paramname">airlines</td><td>- A set of desired airlines. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A vector of lists of integers, where each list represents a path. </dd></dl>
 
 </div>
 </div>

@@ -85,35 +85,393 @@ $(function() {
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a343d5f6bb11f63b73ec6d41eede19e42"><td class="memItemLeft" align="right" valign="top"><a id="a343d5f6bb11f63b73ec6d41eede19e42" name="a343d5f6bb11f63b73ec6d41eede19e42"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>clearScreen</b> ()</td></tr>
+<tr class="memdesc:a343d5f6bb11f63b73ec6d41eede19e42"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_menu_handler.html#a343d5f6bb11f63b73ec6d41eede19e42" title="MenuHandler::clearScreen This function clears the screen. Complexity: O(1)">MenuHandler::clearScreen</a> This function clears the screen. Complexity: O(1) <br /></td></tr>
 <tr class="separator:a343d5f6bb11f63b73ec6d41eede19e42"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:affe66a6e33a7d8e2fbb2767ad5242fff"><td class="memItemLeft" align="right" valign="top"><a id="affe66a6e33a7d8e2fbb2767ad5242fff" name="affe66a6e33a7d8e2fbb2767ad5242fff"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>readAirports</b> (CodeMap &amp;codes, AirportMap &amp;airports, CityMap &amp;cities)</td></tr>
+<tr class="memitem:affe66a6e33a7d8e2fbb2767ad5242fff"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_menu_handler.html#affe66a6e33a7d8e2fbb2767ad5242fff">readAirports</a> (CodeMap &amp;codes, AirportMap &amp;airports, CityMap &amp;cities)</td></tr>
+<tr class="memdesc:affe66a6e33a7d8e2fbb2767ad5242fff"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_menu_handler.html#affe66a6e33a7d8e2fbb2767ad5242fff" title="MenuHandler::readAirports This function reads the airports, their cities and their codes from the fil...">MenuHandler::readAirports</a> This function reads the airports, their cities and their codes from the file and stores them in the maps. Complexity: O(n)  <br /></td></tr>
 <tr class="separator:affe66a6e33a7d8e2fbb2767ad5242fff"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a62ece67319e585e7aba4cb3ad3538d4e"><td class="memItemLeft" align="right" valign="top"><a id="a62ece67319e585e7aba4cb3ad3538d4e" name="a62ece67319e585e7aba4cb3ad3538d4e"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>buildGraph</b> (const CodeMap codes, <a class="el" href="class_graph.html">Graph</a> &amp;graph)</td></tr>
+<tr class="memitem:a62ece67319e585e7aba4cb3ad3538d4e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_menu_handler.html#a62ece67319e585e7aba4cb3ad3538d4e">buildGraph</a> (const CodeMap codes, <a class="el" href="class_graph.html">Graph</a> &amp;graph)</td></tr>
+<tr class="memdesc:a62ece67319e585e7aba4cb3ad3538d4e"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_menu_handler.html#a62ece67319e585e7aba4cb3ad3538d4e" title="MenuHandler::buildGraph This function builds the graph from the file. Complexity: O(n)">MenuHandler::buildGraph</a> This function builds the graph from the file. Complexity: O(n)  <br /></td></tr>
 <tr class="separator:a62ece67319e585e7aba4cb3ad3538d4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adc37686b92edbce68e5911e3b310fa6c"><td class="memItemLeft" align="right" valign="top"><a id="adc37686b92edbce68e5911e3b310fa6c" name="adc37686b92edbce68e5911e3b310fa6c"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>pathMenu</b> (const CodeMap codes, const AirportMap airports, const CityMap cities, <a class="el" href="class_graph.html">Graph</a> graph)</td></tr>
+<tr class="memitem:adc37686b92edbce68e5911e3b310fa6c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_menu_handler.html#adc37686b92edbce68e5911e3b310fa6c">pathMenu</a> (const CodeMap codes, const AirportMap airports, const CityMap cities, <a class="el" href="class_graph.html">Graph</a> graph)</td></tr>
+<tr class="memdesc:adc37686b92edbce68e5911e3b310fa6c"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_menu_handler.html#adc37686b92edbce68e5911e3b310fa6c" title="MenuHandler::pathMenu This function shows the path menu. Complexity: O(n)">MenuHandler::pathMenu</a> This function shows the path menu. Complexity: O(n)  <br /></td></tr>
 <tr class="separator:adc37686b92edbce68e5911e3b310fa6c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a38e02d23f58e419f369ccf105fbbfd99"><td class="memItemLeft" align="right" valign="top"><a id="a38e02d23f58e419f369ccf105fbbfd99" name="a38e02d23f58e419f369ccf105fbbfd99"></a>
-set&lt; string &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>airlinePreference</b> ()</td></tr>
+<tr class="memitem:a38e02d23f58e419f369ccf105fbbfd99"><td class="memItemLeft" align="right" valign="top">set&lt; string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_menu_handler.html#a38e02d23f58e419f369ccf105fbbfd99">airlinePreference</a> ()</td></tr>
+<tr class="memdesc:a38e02d23f58e419f369ccf105fbbfd99"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_menu_handler.html#a38e02d23f58e419f369ccf105fbbfd99" title="MenuHandler::airlinePreference This function shows the path menu. Complexity: O(n)">MenuHandler::airlinePreference</a> This function shows the path menu. Complexity: O(n)  <br /></td></tr>
 <tr class="separator:a38e02d23f58e419f369ccf105fbbfd99"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a40773552a17a161ddba60c1f47889766"><td class="memItemLeft" align="right" valign="top"><a id="a40773552a17a161ddba60c1f47889766" name="a40773552a17a161ddba60c1f47889766"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>pathAirports</b> (const CodeMap codes, const AirportMap airports, <a class="el" href="class_graph.html">Graph</a> graph, set&lt; string &gt; airlines)</td></tr>
+<tr class="memitem:a40773552a17a161ddba60c1f47889766"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_menu_handler.html#a40773552a17a161ddba60c1f47889766">pathAirports</a> (const CodeMap codes, const AirportMap airports, <a class="el" href="class_graph.html">Graph</a> graph, set&lt; string &gt; airlines)</td></tr>
+<tr class="memdesc:a40773552a17a161ddba60c1f47889766"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_menu_handler.html#a40773552a17a161ddba60c1f47889766" title="MenuHandler::pathAirports This function shows the airport pathing menu. Complexity: O(V + E)">MenuHandler::pathAirports</a> This function shows the airport pathing menu. Complexity: O(V + E)  <br /></td></tr>
 <tr class="separator:a40773552a17a161ddba60c1f47889766"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6ff73aaf4197cb6a0ffe3004a858467f"><td class="memItemLeft" align="right" valign="top"><a id="a6ff73aaf4197cb6a0ffe3004a858467f" name="a6ff73aaf4197cb6a0ffe3004a858467f"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>pathCities</b> (const CodeMap codes, const AirportMap airports, const CityMap cities, <a class="el" href="class_graph.html">Graph</a> graph, set&lt; string &gt; airlines)</td></tr>
+<tr class="memitem:a6ff73aaf4197cb6a0ffe3004a858467f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_menu_handler.html#a6ff73aaf4197cb6a0ffe3004a858467f">pathCities</a> (const CodeMap codes, const AirportMap airports, const CityMap cities, <a class="el" href="class_graph.html">Graph</a> graph, set&lt; string &gt; airlines)</td></tr>
+<tr class="memdesc:a6ff73aaf4197cb6a0ffe3004a858467f"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_menu_handler.html#a6ff73aaf4197cb6a0ffe3004a858467f" title="MenuHandler::pathCities This function shows the city pathing menu. Complexity: O(V(V + E))">MenuHandler::pathCities</a> This function shows the city pathing menu. Complexity: O(V(V + E))  <br /></td></tr>
 <tr class="separator:a6ff73aaf4197cb6a0ffe3004a858467f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a528511621accb29b3077119c349593a9"><td class="memItemLeft" align="right" valign="top"><a id="a528511621accb29b3077119c349593a9" name="a528511621accb29b3077119c349593a9"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>pathLocations</b> (const CodeMap codes, const AirportMap airports, <a class="el" href="class_graph.html">Graph</a> graph, set&lt; string &gt; airlines)</td></tr>
+<tr class="memitem:a528511621accb29b3077119c349593a9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_menu_handler.html#a528511621accb29b3077119c349593a9">pathLocations</a> (const CodeMap codes, const AirportMap airports, <a class="el" href="class_graph.html">Graph</a> graph, set&lt; string &gt; airlines)</td></tr>
+<tr class="memdesc:a528511621accb29b3077119c349593a9"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_menu_handler.html#a528511621accb29b3077119c349593a9" title="MenuHandler::pathLocations This function shows the location pathing menu. Complexity: O(V(V + E))">MenuHandler::pathLocations</a> This function shows the location pathing menu. Complexity: O(V(V + E))  <br /></td></tr>
 <tr class="separator:a528511621accb29b3077119c349593a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a64c1c6d5ba270c7e0e0fd1f0a7bc09c1"><td class="memItemLeft" align="right" valign="top"><a id="a64c1c6d5ba270c7e0e0fd1f0a7bc09c1" name="a64c1c6d5ba270c7e0e0fd1f0a7bc09c1"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>airportStats</b> (const CodeMap codes, const AirportMap airports, <a class="el" href="class_graph.html">Graph</a> graph)</td></tr>
+<tr class="memitem:a64c1c6d5ba270c7e0e0fd1f0a7bc09c1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_menu_handler.html#a64c1c6d5ba270c7e0e0fd1f0a7bc09c1">airportStats</a> (const CodeMap codes, const AirportMap airports, <a class="el" href="class_graph.html">Graph</a> graph)</td></tr>
+<tr class="memdesc:a64c1c6d5ba270c7e0e0fd1f0a7bc09c1"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_menu_handler.html#a64c1c6d5ba270c7e0e0fd1f0a7bc09c1" title="MenuHandler::airportStats This function shows the airport stats. Complexity: O(V + E)">MenuHandler::airportStats</a> This function shows the airport stats. Complexity: O(V + E)  <br /></td></tr>
 <tr class="separator:a64c1c6d5ba270c7e0e0fd1f0a7bc09c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>The <a class="el" href="class_menu_handler.html" title="The MenuHandler class This class is used to handle the menu, the user input and the program flow.">MenuHandler</a> class This class is used to handle the menu, the user input and the program flow. </p>
-</div><hr/>The documentation for this class was generated from the following files:<ul>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a38e02d23f58e419f369ccf105fbbfd99" name="a38e02d23f58e419f369ccf105fbbfd99"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a38e02d23f58e419f369ccf105fbbfd99">&#9670;&#160;</a></span>airlinePreference()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">set&lt; string &gt; MenuHandler::airlinePreference </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><a class="el" href="class_menu_handler.html#a38e02d23f58e419f369ccf105fbbfd99" title="MenuHandler::airlinePreference This function shows the path menu. Complexity: O(n)">MenuHandler::airlinePreference</a> This function shows the path menu. Complexity: O(n) </p>
+<dl class="section return"><dt>Returns</dt><dd>The set of airlines. </dd></dl>
+
+</div>
+</div>
+<a id="a64c1c6d5ba270c7e0e0fd1f0a7bc09c1" name="a64c1c6d5ba270c7e0e0fd1f0a7bc09c1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a64c1c6d5ba270c7e0e0fd1f0a7bc09c1">&#9670;&#160;</a></span>airportStats()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MenuHandler::airportStats </td>
+          <td>(</td>
+          <td class="paramtype">const CodeMap&#160;</td>
+          <td class="paramname"><em>codes</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const AirportMap&#160;</td>
+          <td class="paramname"><em>airports</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_graph.html">Graph</a>&#160;</td>
+          <td class="paramname"><em>graph</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><a class="el" href="class_menu_handler.html#a64c1c6d5ba270c7e0e0fd1f0a7bc09c1" title="MenuHandler::airportStats This function shows the airport stats. Complexity: O(V + E)">MenuHandler::airportStats</a> This function shows the airport stats. Complexity: O(V + E) </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">codes</td><td>- The map that stores the airport codes. </td></tr>
+    <tr><td class="paramname">airports</td><td>- The map that stores the airports. </td></tr>
+    <tr><td class="paramname">graph</td><td>- The graph. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a62ece67319e585e7aba4cb3ad3538d4e" name="a62ece67319e585e7aba4cb3ad3538d4e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a62ece67319e585e7aba4cb3ad3538d4e">&#9670;&#160;</a></span>buildGraph()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MenuHandler::buildGraph </td>
+          <td>(</td>
+          <td class="paramtype">const CodeMap&#160;</td>
+          <td class="paramname"><em>codes</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_graph.html">Graph</a> &amp;&#160;</td>
+          <td class="paramname"><em>graph</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><a class="el" href="class_menu_handler.html#a62ece67319e585e7aba4cb3ad3538d4e" title="MenuHandler::buildGraph This function builds the graph from the file. Complexity: O(n)">MenuHandler::buildGraph</a> This function builds the graph from the file. Complexity: O(n) </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">codes</td><td>- The map that stores the airport codes. </td></tr>
+    <tr><td class="paramname">graph</td><td>- The graph. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a40773552a17a161ddba60c1f47889766" name="a40773552a17a161ddba60c1f47889766"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a40773552a17a161ddba60c1f47889766">&#9670;&#160;</a></span>pathAirports()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MenuHandler::pathAirports </td>
+          <td>(</td>
+          <td class="paramtype">const CodeMap&#160;</td>
+          <td class="paramname"><em>codes</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const AirportMap&#160;</td>
+          <td class="paramname"><em>airports</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_graph.html">Graph</a>&#160;</td>
+          <td class="paramname"><em>graph</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">set&lt; string &gt;&#160;</td>
+          <td class="paramname"><em>airlines</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><a class="el" href="class_menu_handler.html#a40773552a17a161ddba60c1f47889766" title="MenuHandler::pathAirports This function shows the airport pathing menu. Complexity: O(V + E)">MenuHandler::pathAirports</a> This function shows the airport pathing menu. Complexity: O(V + E) </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">codes</td><td>- The map that stores the airport codes. </td></tr>
+    <tr><td class="paramname">airports</td><td>- The map that stores the airports. </td></tr>
+    <tr><td class="paramname">graph</td><td>- The graph. </td></tr>
+    <tr><td class="paramname">airlines</td><td>- The set of airlines. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a6ff73aaf4197cb6a0ffe3004a858467f" name="a6ff73aaf4197cb6a0ffe3004a858467f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6ff73aaf4197cb6a0ffe3004a858467f">&#9670;&#160;</a></span>pathCities()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MenuHandler::pathCities </td>
+          <td>(</td>
+          <td class="paramtype">const CodeMap&#160;</td>
+          <td class="paramname"><em>codes</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const AirportMap&#160;</td>
+          <td class="paramname"><em>airports</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const CityMap&#160;</td>
+          <td class="paramname"><em>cities</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_graph.html">Graph</a>&#160;</td>
+          <td class="paramname"><em>graph</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">set&lt; string &gt;&#160;</td>
+          <td class="paramname"><em>airlines</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><a class="el" href="class_menu_handler.html#a6ff73aaf4197cb6a0ffe3004a858467f" title="MenuHandler::pathCities This function shows the city pathing menu. Complexity: O(V(V + E))">MenuHandler::pathCities</a> This function shows the city pathing menu. Complexity: O(V(V + E)) </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">codes</td><td>- The map that stores the airport codes. </td></tr>
+    <tr><td class="paramname">airports</td><td>- The map that stores the airports. </td></tr>
+    <tr><td class="paramname">cities</td><td>- The map that stores the cities. </td></tr>
+    <tr><td class="paramname">graph</td><td>- The graph. </td></tr>
+    <tr><td class="paramname">airlines</td><td>- The set of airlines. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a528511621accb29b3077119c349593a9" name="a528511621accb29b3077119c349593a9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a528511621accb29b3077119c349593a9">&#9670;&#160;</a></span>pathLocations()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MenuHandler::pathLocations </td>
+          <td>(</td>
+          <td class="paramtype">const CodeMap&#160;</td>
+          <td class="paramname"><em>codes</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const AirportMap&#160;</td>
+          <td class="paramname"><em>airports</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_graph.html">Graph</a>&#160;</td>
+          <td class="paramname"><em>graph</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">set&lt; string &gt;&#160;</td>
+          <td class="paramname"><em>airlines</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><a class="el" href="class_menu_handler.html#a528511621accb29b3077119c349593a9" title="MenuHandler::pathLocations This function shows the location pathing menu. Complexity: O(V(V + E))">MenuHandler::pathLocations</a> This function shows the location pathing menu. Complexity: O(V(V + E)) </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">codes</td><td>- The map that stores the airport codes. </td></tr>
+    <tr><td class="paramname">airports</td><td>- The map that stores the airports. </td></tr>
+    <tr><td class="paramname">graph</td><td>- The graph. </td></tr>
+    <tr><td class="paramname">airlines</td><td>- The set of airlines. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="adc37686b92edbce68e5911e3b310fa6c" name="adc37686b92edbce68e5911e3b310fa6c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adc37686b92edbce68e5911e3b310fa6c">&#9670;&#160;</a></span>pathMenu()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MenuHandler::pathMenu </td>
+          <td>(</td>
+          <td class="paramtype">const CodeMap&#160;</td>
+          <td class="paramname"><em>codes</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const AirportMap&#160;</td>
+          <td class="paramname"><em>airports</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const CityMap&#160;</td>
+          <td class="paramname"><em>cities</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_graph.html">Graph</a>&#160;</td>
+          <td class="paramname"><em>graph</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><a class="el" href="class_menu_handler.html#adc37686b92edbce68e5911e3b310fa6c" title="MenuHandler::pathMenu This function shows the path menu. Complexity: O(n)">MenuHandler::pathMenu</a> This function shows the path menu. Complexity: O(n) </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">codes</td><td>- The map that stores the airport codes. </td></tr>
+    <tr><td class="paramname">airports</td><td>- The map that stores the airports. </td></tr>
+    <tr><td class="paramname">cities</td><td>- The map that stores the cities. </td></tr>
+    <tr><td class="paramname">graph</td><td>- The graph. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="affe66a6e33a7d8e2fbb2767ad5242fff" name="affe66a6e33a7d8e2fbb2767ad5242fff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#affe66a6e33a7d8e2fbb2767ad5242fff">&#9670;&#160;</a></span>readAirports()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MenuHandler::readAirports </td>
+          <td>(</td>
+          <td class="paramtype">CodeMap &amp;&#160;</td>
+          <td class="paramname"><em>codes</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">AirportMap &amp;&#160;</td>
+          <td class="paramname"><em>airports</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">CityMap &amp;&#160;</td>
+          <td class="paramname"><em>cities</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><a class="el" href="class_menu_handler.html#affe66a6e33a7d8e2fbb2767ad5242fff" title="MenuHandler::readAirports This function reads the airports, their cities and their codes from the fil...">MenuHandler::readAirports</a> This function reads the airports, their cities and their codes from the file and stores them in the maps. Complexity: O(n) </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">codes</td><td>- The map that stores the airport codes. </td></tr>
+    <tr><td class="paramname">airports</td><td>- The map that stores the airports. </td></tr>
+    <tr><td class="paramname">cities</td><td>- The map that stores the cities. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following files:<ul>
 <li>headers/<a class="el" href="_menu_handler_8h_source.html">MenuHandler.h</a></li>
 <li>definitions/MenuHandler.cpp</li>
 </ul>

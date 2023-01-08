@@ -7,7 +7,15 @@
  * @param n - The amount of nodes the graph will have.
  */
 Graph::Graph(int n) : n(n), nodes(n) {}
-//TODO
+
+/**
+ * @brief Graph::addEdge
+ * This function adds an edge to the graph. It receives the source node, the destination node and the airline that flies between the two nodes.
+ * Complexity: O(N)
+ * @param src - The source node.
+ * @param dest - The destination node.
+ * @param airline - The airline that flies between the two nodes.
+ */
 void Graph::addEdge(int src, int dest, const string &airline) {
     auto it = find_if(nodes[src].edges.begin(), nodes[src].edges.end(), [dest](const Edge &e) { return e.dest == dest; });
     if (it == nodes[src].edges.end()) {
@@ -17,6 +25,12 @@ void Graph::addEdge(int src, int dest, const string &airline) {
     }
 }
 
+/**
+ * @brief Graph::bfs
+ * This function performs a breadth-first search on the graph, starting at the given node. It sets the distance of each node to the given node, and the previous nodes of each node.
+ * Complexity: O(V + E)
+ * @param src - The node to start the search at.
+ */
 void Graph::bfs(int src) {
     for (auto &node : nodes) {
         node.dist = -1;
@@ -46,6 +60,12 @@ void Graph::bfs(int src) {
     }
 }
 
+/**
+ * @brief Graph::bfs
+ * This function performs a breadth-first search on the graph, starting at the given nodes. It sets the distance of each node to the given nodes, and the previous nodes of each node.
+ * Complexity: O(V + E)
+ * @param src - A set of nodes to start the search at.
+ */
 void Graph::bfs(set<int> src) {
     for (auto &node : nodes) {
         node.dist = -1;
@@ -77,6 +97,14 @@ void Graph::bfs(set<int> src) {
     }
 }
 
+/**
+ * @brief Graph::shortestPaths
+ * This function returns all the shortest paths between the given nodes.
+ * Complexity: O(V + E)
+ * @param src - The source node.
+ * @param dest - The destination node.
+ * @return A vector of lists of integers, where each list represents a path.
+ */
 vector<list<int>> Graph::shortestPaths(int src, int dest) {
     bfs(src);
 
@@ -114,6 +142,15 @@ vector<list<int>> Graph::shortestPaths(int src, int dest) {
     return paths;
 }
 
+/**
+ * @brief Graph::shortestPaths
+ * This function returns all the shortest paths between the given nodes.
+ * Complexity: O(V + E)
+ * @param src - A set of source nodes.
+ * @param dest - A set of destination nodes.
+ * @param airlines - A set of desired airlines.
+ * @return A vector of lists of integers, where each list represents a path.
+ */
 vector<list<int>> Graph::shortestPaths(int src, int dest, const set<string> &airlines) {
     bfs(src);
 
@@ -166,6 +203,15 @@ vector<list<int>> Graph::shortestPaths(int src, int dest, const set<string> &air
     return paths;
 }
 
+/**
+ * @brief Graph::shortestPaths
+ * This function returns all the shortest paths between the given nodes.
+ * Complexity: O(V(V + E))
+ * @param src - A set of source nodes.
+ * @param dest - A set of destination nodes.
+ * @param airlines - A set of desired airlines.
+ * @return A vector of lists of integers, where each list represents a path.
+ */
 vector<list<int>> Graph::shortestPaths(set<int> src, set<int> dest) {
     bfs(src);
 
@@ -204,6 +250,15 @@ vector<list<int>> Graph::shortestPaths(set<int> src, set<int> dest) {
     return paths;
 }
 
+/**
+ * @brief Graph::shortestPaths
+ * This function returns all the shortest paths between the given nodes.
+ * Complexity: O(V(V + E))
+ * @param src - A set of source nodes.
+ * @param dest - A set of destination nodes.
+ * @param airlines - A set of desired airlines.
+ * @return A vector of lists of integers, where each list represents a path.
+ */
 vector<list<int>> Graph::shortestPaths(set<int> src, set<int> dest, const set<string> &airlines) {
     bfs(src);
 
@@ -258,10 +313,24 @@ vector<list<int>> Graph::shortestPaths(set<int> src, set<int> dest, const set<st
     return paths;
 }
 
+/**
+ * @brief Graph::getNumOutgoing
+ * This function returns the number of flights that depart from the desired airport.
+ * Complexity: O(1)
+ * @param src - The source node (airport).
+ * @return The number of flights that depart from the desired airport.
+ */
 int Graph::getNumOutgoing(int src) const {
     return nodes[src].edges.size();
 }
 
+/**
+ * @brief Graph::getNumAirlines
+ * This function returns the number of airlines that operate on desired airport.
+ * Complexity: O(E)
+ * @param src - The source node (airport).
+ * @return The number of airlines that operate on desired airport.
+ */
 int Graph::getNumAirlines(int src) const {
     set<string> airlines;
     for (auto &edge : nodes[src].edges) {
@@ -272,6 +341,13 @@ int Graph::getNumAirlines(int src) const {
     return airlines.size();
 }
 
+/**
+ * @brief Graph::getDestinations
+ * This function returns a set of all the destinations that can be reached from the desired airport.
+ * Complexity: O(E)
+ * @param src - The source node (airport).
+ * @return A set of all the destinations that can be reached from the desired airport.
+ */
 set<int> Graph::getDestinations(int src) const {
     set<int> destinations;
     for (auto &edge : nodes[src].edges) {
@@ -280,6 +356,14 @@ set<int> Graph::getDestinations(int src) const {
     return destinations;
 }
 
+/**
+ * @brief Graph::reachable
+ * This function returns a set of all the airlines that operate on the desired airport.
+ * Complexity: O(V + E)
+ * @param src - The source node (airport).
+ * @param hops - The maximum number of hops.
+ * @return A set of all the airports that are reachable within a maximum of n hops (represented by the hops parameter).
+ */
 set<int> Graph::reachable(int src, int hops) {
     set<int> reachable;
 
