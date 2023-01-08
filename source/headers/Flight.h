@@ -5,6 +5,10 @@
 
 using namespace std;
 
+/**
+ * @brief The Flight class
+ * This class is used to store the information of the flight
+ */
 class Flight {
     private:
         string source;

@@ -4,7 +4,10 @@
 #include <bits/stdc++.h>
 
 using namespace std;
-
+/**
+ * @brief The Airport class
+ * This class is used to store the information of the airport
+ */
 class Airport {
     private:
         string code;

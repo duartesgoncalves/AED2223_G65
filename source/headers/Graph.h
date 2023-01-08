@@ -5,6 +5,10 @@
 
 using namespace std;
 
+/**
+ * @brief The Graph class
+ * This class represents the graph data structure
+ */
 class Graph {
     struct Edge {
         int dest;

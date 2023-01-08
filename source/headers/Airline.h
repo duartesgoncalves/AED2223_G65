@@ -4,7 +4,10 @@
 #include <bits/stdc++.h>
 
 using namespace std;
-
+/**
+ * @brief The Airline class
+ * This class is used to store the information of the airline
+ */
 class Airline {
     private:
         string code;

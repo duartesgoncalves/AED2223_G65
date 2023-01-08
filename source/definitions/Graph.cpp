@@ -1,7 +1,13 @@
 #include "../headers/Graph.h"
 
+/**
+ * @brief Graph::Graph
+ * This is the Graph constructor. It receives the amount of nodes the graph will have. It initializes the nodes vector with the given amount of nodes.
+ * Complexity: O(1)
+ * @param n - The amount of nodes the graph will have.
+ */
 Graph::Graph(int n) : n(n), nodes(n) {}
-
+//TODO
 void Graph::addEdge(int src, int dest, const string &airline) {
     auto it = find_if(nodes[src].edges.begin(), nodes[src].edges.end(), [dest](const Edge &e) { return e.dest == dest; });
     if (it == nodes[src].edges.end()) {
